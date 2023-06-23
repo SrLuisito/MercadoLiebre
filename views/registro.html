@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/registro.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/b8dd215804.js" crossorigin="anonymous"></script>
-    <title>Login Mercado Liebre</title>
+    <title>Registro Mercado Liebre</title>
 </head>
 <body>
     <header class="header">
@@ -49,15 +49,54 @@
             </ul>
         </nav>
     </header>
-    <form action="/validar-user" method="post" class="form">
+
+    <form action="/info-user" method="post" class="form">
         <section class="section-form">
-            <input type="text" name="name-user" class="cuadrado" placeholder="Nombre de usuario" required>
+            <input type="text" name="name" class="cuadrado" placeholder="Nombre y Apellido" required>
         </section>
         <section class="section-form">
-            <input type="password" name="password" class="cuadrado" placeholder="Contraseña" required>
+            <input type="text" name="user" class="cuadrado" placeholder="Nombre de usuario" required>
         </section>
-        <section>
-            <button type="submit" class="button"><a href="/">Enviar</a></button>
+        <section class="section-form">
+            <input type="email" name="email" class="cuadrado" placeholder="E-mail" required>
+        </section>
+        <section class="section-form">
+            <label>Fecha de nacimiento</label>
+            <input type="date" name="fecha-nacimiento" class="cuadrado">
+        </section>
+        <section class="section-form">
+            <input type="text" name="domicilio" class="cuadrado" placeholder="Domicilio" required>
+        </section>
+        <section class="section-form">
+            <label>Pefil del usuario</label>
+            <section class="perfil">
+                <label><input type="radio" name="perfil-user" value="Comprador"checked>Comprador</label>
+                <label><input type="radio" name="perfil-user" value="Vendedor">Vendedor</label>
+            </section>
+        </section>
+        <section class="section-form">
+            <label>Intereses</label>
+            <section class="perfil">
+                <label><input type="checkbox" name="intereses" value="Electro">Electro</label>
+                <label><input type="checkbox" name="intereses" value="Moda">Moda</label>
+                <label><input type="checkbox" name="intereses" value="Hogar">Hogar</label>
+                <label><input type="checkbox" name="intereses" value="Jugueteria">Jugueteria</label>
+                <label><input type="checkbox" name="intereses" value="Vida-sana">Vida sana</label>
+            </section>
+        </section>
+        <section class="section-form">
+            <label>Foto de perfil</label>
+            <input type="file" name="Foto" accept=".jpg, .png" class="foto">
+        </section>
+        <section class="section-form">
+            <input type="password" name="password" class="cuadrado" placeholder="Contraseña"required>
+        </section>
+        <section class="section-form">
+            <input type="password" name="password" class="cuadrado" placeholder="Confirmar contraseña" required>
+        </section>
+        <section class="section-button">
+            <button type="submit" class="button"><a href="/">Guardar</a></button>
+            <button type="reset" class="button">Eliminar</button>
         </section>
     </form>
 
@@ -85,5 +124,6 @@
             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.<p>
         </section>
     </footer>
+    
 </body>
 </html>
